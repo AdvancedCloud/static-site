@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
-                        sh 'docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}'
+                        sh 'docker login -u ybhatia500 -p ${DOCKERHUB_PASSWORD}'
                     }
                     sh 'docker image push ybhatia500/staticsite:latest'
                 }
